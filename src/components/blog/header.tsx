@@ -1,12 +1,16 @@
+import { MountainIcon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
 const Header = () => {
   return (
-    <header className="bg-primary text-primary-foreground">
+    <header className=" text-primary">
     <div className="container mx-auto px-4 py-6">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between  items-center">
+        <div className='flex items-center gap-2'>
+        <MountainIcon className='h-10 w-10'/>
         <Link href="/" className="text-2xl font-bold">AdminInsights</Link>
+        </div>
         <nav>
           <ul className="flex space-x-4">
             <li><Link href="/" className="hover:text-secondary-foreground">Inicio</Link></li>
