@@ -7,9 +7,17 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTrigger } from "@/components/ui/dialog";
 import Image from "next/image";
-import { CardTextType } from "./CardText.info.type";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+
+
+export type CardTextType = {
+  title: string;
+  description: string;
+  content: string;
+  fulltext: JSX.Element;  // Cambiado de string a JSX.Element
+  image: string;
+};
 
 const CardText = (props: CardTextType) => {
   const { title, description, image, content, fulltext } = props;
@@ -30,15 +38,14 @@ const CardText = (props: CardTextType) => {
         <p>{content}</p>
       </CardContent>
       <CardFooter>
-        <Dialog>
+        <Dialog >
           <DialogTrigger asChild>
             <Button>Leer Más</Button>
           </DialogTrigger>
-          <DialogContent className="bg-white ">
+          <DialogContent className="bg-white max-w-3xl max-h-[60vh] overflow-y-auto p-4">
             <DialogHeader>
-              <DialogTitle>{title}</DialogTitle>
               <DialogDescription>
-                {fulltext}
+                {fulltext} 
               </DialogDescription>
             </DialogHeader>
           </DialogContent>

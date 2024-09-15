@@ -90,3 +90,29 @@ body {
     @apply  text-foreground;
   }
 }
+
+
+/* Estilos para la barra de desplazamiento en Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* Tamaño de la barra de desplazamiento */
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 0.5rem; /* Color del pulgar de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color del pulgar cuando el mouse pasa por encima */
+}
+
+/* Estilos para la barra de desplazamiento en Firefox */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.scrollbar-thin:hover {
+  scrollbar-color: #555 #f1f1f1;
+}
