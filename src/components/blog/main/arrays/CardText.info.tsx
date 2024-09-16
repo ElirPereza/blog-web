@@ -1,6 +1,7 @@
 import FulltextTemplate from "./template/recent/fulltext.template";
 import ProcessStagesTemplate from "./template/recent/fulltext.template2";
 import FunctionalAreasTemplate from "./template/recent/fulltext.template3";
+import EthicsTemplate from "./template/topichiglight/template4";
 
 export const DataCardInfo = [
   {
@@ -26,5 +27,12 @@ export const DataCardInfo = [
       "Explora las principales áreas funcionales de una organización y cómo contribuyen al logro de los objetivos empresariales.",
     fulltext:<FunctionalAreasTemplate/>,
     image:"/funcional.jpg"
+    },
+    {
+      title: "Ética en los Negocios",
+      description: "Publicado el 9 de septiembre, 2024",
+      content: "Entiende la importancia de la ética en la toma de decisiones y la cultura organizacional.",
+      fulltext: <EthicsTemplate />,
+      image: "/etica.jpg"
     },
 ];
